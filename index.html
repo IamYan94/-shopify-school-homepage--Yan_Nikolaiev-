@@ -4,85 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stellar Soft Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <!--header-->
-    <header>
-      <div>
-        <!--Logo-->
-        
-        <a href="#">  <img src="./images/logo.svg" alt=""> Stellar Soft</a>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">New & Featured</a>
+    <header class="header" role="banner">
+      <div class="container header__inner">
+        <div class="logo-stellar">
+          <img src="./images/logo.svg" alt="Logo Stellar Soft">
+          <a class="header__logo" href="#" aria-label="Stellar Soft - Home">   Stellar Soft</a>
+
+        </div>
+        <nav class="nav" aria-label="Main Navigation">
+          <ul class="nav__list">
+            <li class="nav__item" >
+            <a class="nav__link" href="#">New & Featured</a>
             </li>
-            <li>
-              <a href="#">Men</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Men</a>
             </li>
-            <li>
-              <a href="#">Women</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Women</a>
             </li>
-            <li>
-              <a href="">Kids</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">Kids</a>
             </li>
           </ul>
         </nav>
         <!--basket-->
-        <a href="#">
-          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.45A2 2 0 0 0 10 19h10v-2H10.42a.25.25 0 0 1-.22-.37L11 15h7a2 2 0 0 0 1.8-1.1l3-6A1 1 0 0 0 22 6H6.21l-.94-2z"
-            ></path>
-          </svg>
+        <a class="header__cart" href="#">
+          <img src="./images/basket.svg" alt="basket">
         </a>
       </div>
     </header>
     <main>
-      <!--Hero-->
-      <section>
-        <!--Hero swiper-->
-        <div>
-          <!--swiper hero-->
-          <div>
-            <!--Swiper wrapper-->
-            <div>
-              <!--swiper slide-->
-              <img src="" alt="Головний банер" />
-              <div>
-                <!-- container hero-->
-                <h1>More than just shoes — it’s a part of your story.</h1>
-                <p>
-                  Original sneakers from Nike and other top brands that make
-                  every step feel special.
-                </p>
-                <a href="#">Shop the Collection</a>
-              </div>
-              <div>
-                <!-- Hero Banner  2 -->
-                <img alt="Головний банер 2" />
-                <div>
-                  <h2>Active Series</h2>
-                  <p>Легкість у русі</p>
-                  <a href="#">Shop the Collection</a>
-                </div>
-              </div>
-              <div>
-                <!--  Hero Banner3 -->
-                <img alt="Головний банер 3" />
-                <div>
-                  <h2>Premium Basics</h2>
-                  <p>Якість поза часом</p>
-                  <a href="#">Shop the Collection</a>
-                </div>
-              </div>
-              <div>
-                <!--swiper-pagination-->
-              </div>
-            </div>
-          </div>
+      
+      <section class="hero" aria-label="Hero slider">
+  <div class="swiper hero__swiper">
+    <div class="swiper-wrapper">
+   
+      <div class="swiper-slide hero__slide">
+        <img class="hero__bg" src="./images/Slide - 1.jpg" alt="Nike Banner" />
+        <div class="container hero__content">
+          <h1 class="hero__title">More than just shoes — <br> it’s a part of your story.</h1>
+          <p class="hero__subtitle">Original sneakers from Nike and other top brands that make every step feel special.</p>
+          <a class="button button--white" href="#">Shop the Collection</a>
         </div>
-      </section>
+      </div>
+
+     
+      <div class="swiper-slide hero__slide">
+        <img class="hero__bg" src="./images/Slide - 2.png" alt="Sport woman" />
+        <div class="container hero__content">
+          <h2 class="hero__title">Active Series</h2>
+          <p class="hero__subtitle">Push your limits with gear designed for flexibility and comfort.<br> Perfect for training, running, and everyday performance.</p>
+          <a class="button button--white" href="#">Shop the Collection</a>
+        </div>
+      </div>
+
+   
+      <div class="swiper-slide hero__slide">
+        <img class="hero__bg" src="./images/Slide - 3.png" alt="Sneakers Nike" />
+        <div class="container hero__content">
+          <h2 class="hero__title">Premium Basics</h2>
+          <p class="hero__subtitle">Step into sneakers that combine modern style with lasting durability.<br> Essential pieces that never go out of fashion.</p>
+          <a class="button button--white" href="#">Shop the Collection</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
 
       <!-- FEATURED -->
       <section>
@@ -307,5 +304,7 @@
       </div>
     </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./app.js"></script>
   </body>
 </html>
