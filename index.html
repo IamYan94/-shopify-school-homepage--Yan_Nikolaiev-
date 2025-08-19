@@ -13,8 +13,8 @@
   <body>
     <header class="header" role="banner">
       <div class="container header__inner">
-        <div class="logo-stellar">
-          <img src="./images/logo.svg" alt="Logo Stellar Soft">
+        <div class="header__stellar">
+          <img class="header__svg" src="./images/logo.svg" alt="Logo Stellar Soft">
           <a class="header__logo" href="#" aria-label="Stellar Soft - Home">   Stellar Soft</a>
 
         </div>
@@ -82,66 +82,54 @@
 
 
       <!-- FEATURED -->
-      <section>
-        <div>
-          <h2>Featured Collection</h2>
-        </div>
-        <!--featured bar-->
-        <div>
-          <!-- container featured bar inner -->
-          <div>
-            <!-- featured arrows-->
-            <div>
-              <!--button попередні товари-->
-              <button></button>
-              <!-- button наступні товари-->
-              <button></button>
-            </div>
+<section class="featured" aria-labelledby="featured-title">
+  <div class="container">
+    <h2 id="featured-title" class="section-title section-title--center">Featured Collection</h2>
+  </div>
+
+  <div class="featured__wrap">
+    <div class="container featured__container ">
+      <div class="swiper featured__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="./images/sneakers1.jpg" alt="Nike Streakfly 2">
+              <h3 class="product-card__title">Nike Streakfly 2</h3>
+              <p class="product-card__price">$300.00</p>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="./images/sneakers2.jpg" alt="Nike Pegasus Premium">
+              <h3 class="product-card__title">Nike Pegasus Premium</h3>
+              <p class="product-card__price">$350.00</p>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="./images/sneakers3.jpg" alt="Nike Pegasus 41">
+              <h3 class="product-card__title">Nike Pegasus 41</h3>
+              <p class="product-card__price">$280.00</p>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="product-card">
+              <img class="product-card__img" src="./images/sneakers4.jpg" alt="Nike Revolution 7">
+              <h3 class="product-card__title">Nike Revolution 7</h3>
+              <p class="product-card__price">$440.00</p>
+            </article>
           </div>
         </div>
-        <div>
-          <div>
-            <!--swiper featured-->
-            <div>
-              <!--swiper-wrapper-->
-              <div>
-                <div>
-                  <article>
-                    <!-- Product 'Nike Streakfly ' -->
-                    <img />
-                    <h3>Nike Streakfly 2</h3>
-                    <p>$300.00</p>
-                  </article>
-                </div>
-                <div>
-                  <article>
-                    <!-- Nike Pegasus Premium' -->
-                    <img alt="Nike Pegasus Premium" />
-                    <h3>Nike Pegasus Premium</h3>
-                    <p>$350.00</p>
-                  </article>
-                </div>
-                <div>
-                  <article>
-                    <!--Nike Pegasus 41-->
-                    <img alt="Nike Pegasus 41" />
-                    <h3>Nike Pegasus 41</h3>
-                    <p>$280.00</p>
-                  </article>
-                </div>
-                <div>
-                  <article>
-                    <!--Product 'Nike Revolution 7-->
-                    <img alt="Nike Revolution 7" />
-                    <h3>Nike Revolution 7</h3>
-                    <p>$440.00</p>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+      <button class="featured__arrow featured__arrow--next" aria-label="Next"></button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
       <!-- FAQ -->
       <section>
         <div>
