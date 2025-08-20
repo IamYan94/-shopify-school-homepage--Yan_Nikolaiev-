@@ -31,3 +31,54 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   nextBtn.addEventListener("click", () => swiper.slideNext());
 });
+
+/*-- SPOTLIGHT --*/
+const thumbsContainer = document.getElementById("thumbs");
+const mainImage = document.getElementById("mainImage");
+const price = document.getElementById("price");
+const colorBtns = document.querySelectorAll(".color");
+const sizes = document.querySelectorAll(".size");
+
+function loadThumbs(colorNum) {
+  thumbsContainer.innerHTML = "";
+  for (let i = 1; i <= 5; i++) {
+    const btn = document.createElement("button");
+    btn.className = "thumb" + (i === 1 ? " thumb--active" : "");
+    btn.innerHTML = `<img src="images/Color ${colorNum}.${i}.jpg" alt="Thumbnail ${i}">`;
+
+    btn.addEventListener("click", () => {
+      document
+        .querySelector(".thumb--active")
+        ?.classList.remove("thumb--active");
+      btn.classList.add("thumb--active");
+      mainImage.src = `images/Color ${colorNum}.${i}.jpg`;
+    });
+
+    thumbsContainer.appendChild(btn);
+  }
+
+  mainImage.src = `images/Color ${colorNum}.1.jpg`;
+}
+
+colorBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    colorBtns.forEach((x) => {
+      x.classList.remove("color--active");
+      x.setAttribute("aria-checked", "false");
+    });
+    btn.classList.add("color--active");
+    btn.setAttribute("aria-checked", "true");
+
+    loadThumbs(btn.dataset.color);
+    price.textContent = `$${btn.dataset.price}.00`;
+  });
+});
+
+sizes.forEach((s) =>
+  s.addEventListener("click", () => {
+    document.querySelector(".size--active")?.classList.remove("size--active");
+    s.classList.add("size--active");
+  })
+);
+
+loadThumbs(1);
