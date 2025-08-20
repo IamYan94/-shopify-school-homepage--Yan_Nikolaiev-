@@ -402,7 +402,6 @@ p {
   outline: 2px solid #111;
   outline-offset: 2px;
 }
-/* ===== Vars (можеш підлаштувати, але назви ті самі) ===== */
 :root {
   --brand: #111827;
   --text: #111111;
